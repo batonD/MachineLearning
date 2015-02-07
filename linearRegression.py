@@ -11,9 +11,9 @@ def linearRegression(data):
 	y = array([d[-1] for d in data])
 
 	xT = transpose(x)
-	xTx = inv(dot(xT,x))
+	xTxInv = inv(dot(xT,x))
 
-	w = dot(dot(xTx,xT),y)
+	w = dot(dot(xTxInv,xT),y)
 	return w
 
 
