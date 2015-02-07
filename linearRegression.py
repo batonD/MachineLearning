@@ -16,13 +16,13 @@ def linearRegression(data):
 	w = dot(dot(xTxInv,xT),y)
 	return w
 
-
+# Uncomment the code below to perfrom a test run
 # Generate toy data within model 
-noise = lambda: random.random() * .01
-initW = array([-3,10,2,9,1])
-bias, data = initW[0], initW[1:]
-points = [tuple(v) + (dot(data, v) + bias + noise(),) for v in [random.random(4) for _ in range(100)]]
+#noise = lambda: random.random() * .01
+#initW = array([-3,10,2,9,1])
+#bias, data = initW[0], initW[1:]
+#points = [tuple(v) + (dot(data, v) + bias + noise(),) for v in [random.random(4) for _ in range(100)]]
 
-w = linearRegression(points)
-print initW
-print w
+#w = linearRegression(points)
+#print initW
+#print w
